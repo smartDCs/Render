@@ -34,6 +34,10 @@ function App() {
         <p><strong>Ubicación:</strong> Parroquia Belisario Quevedo - Latacunga</p>
         <p><strong>Diseño:</strong> Arq. Edison Chicaisa </p>
         <p><strong>Contacto:</strong> 0987633991 </p>
+        <p><strong>Mouse controls</strong></p>
+        <p><strong>Boton izquierdo:</strong> Rotar </p>
+        <p><strong>Scroll:</strong> Zoom </p>
+        <p><strong>Boton derecho:</strong> Centrar </p>
         </Item1>
       </Grid>
       <Grid item xs={9}>
