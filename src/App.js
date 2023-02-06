@@ -26,7 +26,7 @@ const Item1 = styled(Paper)(({ theme }) => ({
 function App() {
   return (
     <Grid container spacing={3} style={{background:"#ccb"}}>
-      <Grid item xs={3}>
+      <Grid item xs={12} sm={3} xl={3}>
         <Item1>
           <h2>Desarrollado por: <img src={logo} width="80" height="50"></img></h2>
         <h1>Vivienda unifamiliar</h1>
@@ -40,7 +40,7 @@ function App() {
         <p><strong>Boton derecho:</strong> Centrar </p>
         </Item1>
       </Grid>
-      <Grid item xs={9}>
+      <Grid item xs={12} sm={9} xl={9}>
         <Item>
           <div style={{ width: "100%", height: "100vh" }}>
             <Canvas camera={{ zoom: 1, position: [15, 20, 15] }}>
