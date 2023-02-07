@@ -6,7 +6,7 @@ import { Canvas } from "react-three-fiber";
 import Casa from "./components/casa/Casa";
 
 import { OrbitControls, Sky, Text } from "@react-three/drei";
-import Grid from "@mui/material/Grid";
+
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import logo from "./images/2devs.png";
@@ -28,7 +28,11 @@ const Item1 = styled(Paper)(({ theme }) => ({
 function App() {
   return (
     <div style={{ width: "100%", height: "100vh" }}>
+
       <Canvas camera={{ zoom: 1.2, position: [20, 10, 20] }}>
+
+     
+
         <ambientLight intensity={0.8} />
         <pointLight position={[35, 35, 0]} intensity={0.7} />
         <pointLight position={[-35, 35, 0]} intensity={0.8} />
@@ -47,7 +51,7 @@ function App() {
             dampingFactor={0.4}
           />
 
-          <Casa />
+          <Casa rotation={[0, Math.PI * 1.25, 0]} />
           <Text
             scale={[2, 2, 2]}
             color="black"
