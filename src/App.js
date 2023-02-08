@@ -10,6 +10,18 @@ import { OrbitControls, Sky, Text } from "@react-three/drei";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import logo from "./images/2devs.png";
+import Sidebar from "./components/Sidebar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AboutUs, OurAim, OurVision } from "./components/pages/AboutUs";
+import {
+  Services,
+  ServicesOne,
+  ServicesTwo,
+  ServicesThree,
+} from "./components/pages/Services";
+import { Events, EventsOne, EventsTwo } from "./components/pages/Events";
+import Contact from "./components/pages/ContactUs";
+import Support from "./components/pages/Support";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -27,12 +39,32 @@ const Item1 = styled(Paper)(({ theme }) => ({
 }));
 function App() {
   return (
+    <Router>
+      <Sidebar />
+      <Routes>
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/about-us/aim" element={<OurAim />} />
+        <Route path="/about-us/vision" element={<OurVision />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/services/services1" element={<ServicesOne />} />
+        <Route path="/services/services2" element={<ServicesTwo />} />
+        <Route path="/services/services3" element={<ServicesThree />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/events/events1" element={<EventsOne />} />
+        <Route path="/events/events2" element={<EventsTwo />} />
+        <Route path="/support" element={<Support />} />
+      </Routes>
+    </Router>
+  );
+  /* return (
     <div style={{ width: "100%", height: "100vh" }}>
-
-      <Canvas camera={{ zoom: 1.2, position: [20, 10, 20] }}>
-
-     
-
+      <h1>
+        testing
+        <br />
+        <span>w/JASON</span>
+      </h1>
+      <Canvas shadowMap camera={{ zoom: 1.2, position: [20, 10, 20] }}>
         <ambientLight intensity={0.8} />
         <pointLight position={[35, 35, 0]} intensity={0.7} />
         <pointLight position={[-35, 35, 0]} intensity={0.8} />
@@ -74,7 +106,6 @@ function App() {
             anchorX="center"
             anchorY="bottom"
             position={[15, 7, 0]}
-            
           >
             E-mail: edichicaisa@gmail.com
           </Text>
@@ -90,7 +121,7 @@ function App() {
         </Suspense>
       </Canvas>
     </div>
-  );
+  );*/
 }
 
 export default App;
