@@ -53,3 +53,25 @@
   margin-left: 260px;
   font-size: 2rem;
 }
+
+
+info {
+  color: black;
+}
+divPrincipal {
+ position: relative;
+width: "50%";
+ height: "100%";
+ position:"relative";
+}
+.textInfo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+ 
+ text-align: center;
+ font-size: 2vw;
+  
+}

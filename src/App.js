@@ -12,7 +12,7 @@ import Paper from "@mui/material/Paper";
 import logo from "./images/2devs.png";
 import Sidebar from "./components/Sidebar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { AboutUs, OurAim, OurVision } from "./components/pages/AboutUs";
+import { Proyectos, OurAim, OurVision } from "./components/pages/Proyectos";
 import {
   Services,
   ServicesOne,
@@ -42,7 +42,7 @@ function App() {
     <Router>
       <Sidebar />
       <Routes>
-        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/proyectos" element={<Proyectos />} />
         <Route path="/about-us/aim" element={<OurAim />} />
         <Route path="/about-us/vision" element={<OurVision />} />
         <Route path="/services" element={<Services />} />
