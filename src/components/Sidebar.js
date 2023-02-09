@@ -9,7 +9,7 @@ import { IconContext } from "react-icons/lib";
  
 const Nav = styled.div`
   background: #15171c;
-  height: 80px;
+  height: 50px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -17,7 +17,7 @@ const Nav = styled.div`
  
 const NavIcon = styled(Link)`
   margin-left: 2rem;
-  font-size: 2rem;
+  font-size: 4vh;
   height: 80px;
   display: flex;
   justify-content: flex-start;
@@ -54,8 +54,8 @@ const Sidebar = () => {
             <FaIcons.FaBars onClick={showSidebar} />
           </NavIcon>
           <h1
-            style={{ textAlign: "center",
-                     marginLeft: "200px",
+            style={{ textAlign: "end",
+                     fontSize:"2vh",
                      color: "green" }}
           >
             DomotizArq
