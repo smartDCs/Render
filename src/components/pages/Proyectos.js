@@ -1,7 +1,7 @@
 import React, { Component, Suspense } from "react";
 import Casa from "../casa/Casa";
 import CasaDavid from "../casa/CasaDavid";
-import { OrbitControls, Sky, Text } from "@react-three/drei";
+import { OrbitControls, Sky, Cloud } from "@react-three/drei";
 import { Canvas } from "react-three-fiber";
 import logo from "../../images/2devs.png";
 
@@ -29,23 +29,33 @@ export const OurAim = () => {
     >
       <Canvas camera={{ zoom: 1.2, position: [20, 10, 20] }}>
         <ambientLight intensity={0.8} />
-        <pointLight position={[35, 35, 0]} intensity={0.7} />
-        <pointLight position={[-35, 35, 0]} intensity={0.8} />
-
+        <pointLight position={[0, 0, -100]} intensity={2} />
+        <pointLight position={[35, 35, -100]} intensity={2} />
         <Sky
-          distance={450000}
-          sunPosition={[0, 1, 0]}
-          inclination={0}
-          azimuth={0.25}
+          sunPosition={[0, 0, -10]}
+          inclination={0.6}
+          azimuth={0.1}
+          turbidity={10}
+          rayleigh={0.5}
+          distance={1000}
         />
-
+      
         <Suspense fallback={null}>
           <OrbitControls
             enableDamping={true}
             enablePan={true}
             dampingFactor={0.4}
           />
-
+          <Cloud position={[-4, 30, -25]} speed={0.2} opacity={1} />
+          <Cloud position={[4, 30, -15]} speed={0.2} opacity={0.5} />
+          <Cloud position={[-4, 30, -10]} speed={0.2} opacity={1} />
+          <Cloud position={[4, 30, -5]} speed={0.2} opacity={0.5} />
+          <Cloud position={[4, 30, 0]} speed={0.2} opacity={0.75} />
+          <Cloud position={[-50, 30, -25]} speed={0.2} opacity={1} />
+          <Cloud position={[50, 30, -15]} speed={0.2} opacity={0.5} />
+          <Cloud position={[-50, 30, -10]} speed={0.2} opacity={1} />
+          <Cloud position={[50, 30, -5]} speed={0.2} opacity={0.5} />
+          <Cloud position={[50, 30, 0]} speed={0.2} opacity={0.75} />
           <Casa rotation={[0, Math.PI * 1.25, 0]} />
         </Suspense>
       </Canvas>
@@ -74,11 +84,6 @@ export const OurAim = () => {
             </a>
           </Grid>
         </Grid>
-      </div>
-
-      <div className="logo2Dev">
-        <p>Desarrollado por: </p>
-        <img src={logo} className="imglogo"></img>
       </div>
     </div>
   );
@@ -135,7 +140,6 @@ export const OurVision = () => {
           </Grid>
         </Grid>
       </div>
-
     </div>
   );
 };
