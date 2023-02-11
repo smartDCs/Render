@@ -3,7 +3,7 @@ import React from "react";
 const Support = () => {
   return (
     <div className="support">
-      <h1>GeeksforGeeks Support us</h1>
+      <h3>Desarrollado por 2devs</h3>
     </div>
   );
 };

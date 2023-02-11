@@ -55,15 +55,11 @@
 }
 
 
-info {
+.info {
   color: black;
+ 
 }
-divPrincipal {
- position: relative;
-width: "50%";
- height: "100%";
- position:"relative";
-}
+
 .textInfo{
   position: absolute;
   top: 0;
@@ -72,6 +68,23 @@ width: "50%";
   margin: 0 auto;
  
  text-align: center;
+
+ width: 100%;
+ background-color: rgba(250, 250,250,0.5)
+ 
+}
+.logo2Dev{
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+margin: auto auto;
+
+ text-align: center;
  font-size: 2vw;
  
+}
+
+.imglogo{
+  width: 5dvw;
+  height: 5dvh;
 }

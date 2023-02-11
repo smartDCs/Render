@@ -377,8 +377,8 @@ export function CasaDavid(props) {
             <mesh geometry={nodes.mesh_343.geometry} material={materials['R0,G0,B255']} />
             <mesh geometry={nodes.mesh_344.geometry} material={materials['R164,G172,B176']} />
           </group>
-          <mesh geometry={nodes.mesh_345.geometry} material={materials['R0,G0,B0']} />
-          <mesh geometry={nodes.mesh_346.geometry} material={materials['R0,G0,B0']} />
+          <mesh geometry={nodes.mesh_345.geometry} material={materials['R166,G166,B255']} />{/**macetero */}
+          <mesh geometry={nodes.mesh_346.geometry} material={materials['R0,G12,B12']} />  {/**parqueadero */}
           <mesh geometry={nodes.mesh_347.geometry} material={materials['R234,G234,B234']} />
           <mesh geometry={nodes.mesh_348.geometry} material={materials['R234,G234,B234']} />
           <mesh geometry={nodes.mesh_349.geometry} material={materials['R234,G234,B234']} />
@@ -479,40 +479,7 @@ export function CasaDavid(props) {
           <mesh geometry={nodes.mesh_444.geometry} material={materials['R127,G127,B127']} />
           <mesh geometry={nodes.mesh_445.geometry} material={materials['R127,G127,B127']} />
           <mesh geometry={nodes.mesh_446.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_447.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_448.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_449.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_450.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_451.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_452.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_453.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_454.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_455.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_456.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_457.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_458.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_459.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_460.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_461.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_462.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_463.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_464.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_465.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_466.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_467.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_468.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_469.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_470.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_471.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_472.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_473.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_474.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_475.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_476.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_477.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_478.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_479.geometry} material={materials['R127,G127,B127']} />
-          <mesh geometry={nodes.mesh_480.geometry} material={materials['R127,G127,B127']} />
+     
         </group>
       </group>
     </group>

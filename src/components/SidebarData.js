@@ -25,7 +25,7 @@ export const SidebarData = [
       },
     ],
   },
-  
+  /*
   {
     title: "Services",
     path: "/services",
@@ -53,11 +53,13 @@ export const SidebarData = [
       },
     ],
   },
+  */
   {
     title: "Contact",
     path: "/contact",
     icon: <FaIcons.FaPhone />,
   },
+  /*
   {
     title: "Events",
     path: "/events",
@@ -79,6 +81,7 @@ export const SidebarData = [
       },
     ],
   },
+  */
   {
     title: "Support",
     path: "/support",
