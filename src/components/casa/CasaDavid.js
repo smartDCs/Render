@@ -304,6 +304,8 @@ export function CasaDavid(props) {
           <mesh geometry={nodes.mesh_289.geometry} material={materials['R0,G128,B192']} />
           <mesh geometry={nodes.mesh_290.geometry} material={materials['R244,G244,B244']} />
           <mesh geometry={nodes.mesh_291.geometry} material={materials['R0,G128,B192']} />
+         
+
           <mesh geometry={nodes.mesh_292.geometry} material={materials['R244,G244,B244']} />
           <mesh geometry={nodes.mesh_293.geometry} material={materials['R0,G128,B192']} />
           <mesh geometry={nodes.mesh_294.geometry} material={materials['R244,G244,B244']} />
@@ -315,6 +317,7 @@ export function CasaDavid(props) {
           <mesh geometry={nodes.mesh_300.geometry} material={materials['R244,G244,B244']} />
           <mesh geometry={nodes.mesh_301.geometry} material={materials['R0,G128,B192']} />
           <mesh geometry={nodes.mesh_302.geometry} material={materials['R244,G244,B244']} />
+    
           <mesh geometry={nodes.mesh_303.geometry} material={materials['R233,G233,B228']} />
           <mesh geometry={nodes.mesh_304.geometry} material={materials['R233,G233,B228']} />
           <mesh geometry={nodes.mesh_305.geometry} material={materials['R233,G233,B228']} />

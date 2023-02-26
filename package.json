@@ -26,6 +26,7 @@
     "react-three-fiber": "^6.0.13",
     "react-three-fpscontrols": "^0.2.0",
     "reactstrap": "^9.1.5",
+    "simplex-noise": "^4.0.1",
     "styled-components": "^5.3.6",
     "three": "^0.149.0",
     "troika-three-text": "^0.47.1",

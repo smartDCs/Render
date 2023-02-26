@@ -1,7 +1,9 @@
 import React, { useRef, useState } from "react";
 import { PointerLockControls } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
-import { Vector3 } from "three";
+import { useFrame, useThree } from "@react-three/fiber";
+import { Vector3, Raycaster } from "three";
+import { useMemo } from "react";
+
 /*
 const Floor = ({ bound, floorMaterial }) => {
   return (
@@ -18,10 +20,11 @@ const Floor = ({ bound, floorMaterial }) => {
   );
 };
 */
+
 const CameraControls = ({ velocityFactor, bound, cameraInitialPosition }) => {
   const [ascend, setAscend] = useState(false);
- 
-
+  const [floor, setFloor] =useState(3);
+let p=1;
   let moveForward = false;
   let moveBackward = false;
   let moveLeft = false;
@@ -32,8 +35,10 @@ const CameraControls = ({ velocityFactor, bound, cameraInitialPosition }) => {
   let prevTime = 0;
   const velocity = new Vector3();
   const direction = new Vector3();
-  const onKeyDown = function (event) {
+  const onKeyDown = function(event) {
+   
     switch (event.code) {
+      
       case "ArrowUp":
       case "KeyW":
         moveForward = true;
@@ -65,13 +70,21 @@ const CameraControls = ({ velocityFactor, bound, cameraInitialPosition }) => {
       case "KeyF":
         setAscend(!ascend);
         break;
-      
+    
+        case "KeyQ":
+p=floor+1;
+          setFloor(p);
+          break;
+          case "KeyZ":
+            p=floor-1;
+            setFloor(p);
+            break;
       default:
         break;
     }
   };
 
-  const onKeyUp = function (event) {
+  const onKeyUp = function(event) {
     switch (event.code) {
       case "ArrowUp":
       case "KeyW":
@@ -103,15 +116,14 @@ const CameraControls = ({ velocityFactor, bound, cameraInitialPosition }) => {
   const canvas = document.getElementById("canvas");
 
   useFrame(({ clock }) => {
-   
     controlsRef.current.addEventListener("lock", () => {
-       // welcome.style.display = "none";
-        canvas.style.display = "block";
-      });
-      controlsRef.current.addEventListener("unlock", function () {
-       // welcome.style.display = "flex";
-        canvas.style.display = "flex";
-      });
+      // welcome.style.display = "none";
+      canvas.style.display = "block";
+    });
+    controlsRef.current.addEventListener("unlock", function() {
+      // welcome.style.display = "flex";
+      canvas.style.display = "flex";
+    });
     // Getting the delta time to change location of camera.
     const elapsedTime = clock.getElapsedTime();
     const delta = elapsedTime - prevTime;
@@ -125,8 +137,7 @@ const CameraControls = ({ velocityFactor, bound, cameraInitialPosition }) => {
     // Change direction based on the keys pressed by user
     direction.z = Number(moveForward) - Number(moveBackward);
     direction.x = Number(moveRight) - Number(moveLeft);
-    direction.y=Number(moveForward) - Number(moveBackward);
-   
+
     direction.normalize();
 
     // Movement controls for FPS specified in Three.js Docs.
@@ -134,16 +145,17 @@ const CameraControls = ({ velocityFactor, bound, cameraInitialPosition }) => {
     if (moveLeft || moveRight) velocity.x -= direction.x * 50 * delta;
     controlsRef.current.moveRight(-velocity.x * delta);
     controlsRef.current.moveForward(-velocity.z * delta);
-    
 
     // Increasing height on pressing F key
-    if (!ascend)
+    if (!ascend){
       controlsRef.current.getObject().position.y += velocity.y * delta;
-    else
-      controlsRef.current.getObject().position.y = cameraInitialPosition.y + 10; // new behavior
+      controlsRef.current.getObject().position.y = (0.5*floor);
+    
+    }
+    else controlsRef.current.getObject().position.y = 1.5; // new behavior
 
     // bringing user back to plane after jump limit reached.
-    if (controlsRef.current.getObject().position.y < 10) {
+    if (controlsRef.current.getObject().position.y < 0) {
       velocity.y = 0;
       controlsRef.current.getObject().position.y = cameraInitialPosition.y;
       canJump = true;
@@ -165,16 +177,14 @@ const CameraControls = ({ velocityFactor, bound, cameraInitialPosition }) => {
 };
 
 const FpsController = ({
-  velocityFactor =0.5,
- 
- 
+  velocityFactor = 0.5,
+
   bound = 200,
- 
+
   cameraInitialPosition = [0, 5, 25],
 }) => {
   return (
     <>
-      
       <CameraControls
         velocityFactor={velocityFactor}
         bound={bound}

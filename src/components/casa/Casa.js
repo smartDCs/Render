@@ -12,6 +12,7 @@ export function Casa(props) {
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]} scale={0.3}>
+        
           <mesh geometry={nodes.mesh_0.geometry} material={materials['woods & plastics.finish carpentry.wood.pine.png']} position={[58.68, 8.86, -14.77]} rotation={[-Math.PI, 0, -Math.PI]} />
           <mesh geometry={nodes.mesh_1.geometry} material={materials['woods & plastics.finish carpentry.wood.pine.png']} position={[58.68, 8.86, -14.44]} rotation={[-Math.PI, 0, -Math.PI]} />
           <mesh geometry={nodes.mesh_2.geometry} material={materials['woods & plastics.finish carpentry.wood.pine.png']} position={[58.68, 8.86, -14.11]} rotation={[-Math.PI, 0, -Math.PI]} />
