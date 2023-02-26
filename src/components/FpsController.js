@@ -23,8 +23,8 @@ const Floor = ({ bound, floorMaterial }) => {
 
 const CameraControls = ({ velocityFactor, bound, cameraInitialPosition }) => {
   const [ascend, setAscend] = useState(false);
-  const [floor, setFloor] =useState(3);
-let p=1;
+  const [floor, setFloor] = useState(3);
+  let p = 1;
   let moveForward = false;
   let moveBackward = false;
   let moveLeft = false;
@@ -36,9 +36,7 @@ let p=1;
   const velocity = new Vector3();
   const direction = new Vector3();
   const onKeyDown = function(event) {
-   
     switch (event.code) {
-      
       case "ArrowUp":
       case "KeyW":
         moveForward = true;
@@ -70,15 +68,15 @@ let p=1;
       case "KeyF":
         setAscend(!ascend);
         break;
-    
-        case "KeyQ":
-p=floor+1;
-          setFloor(p);
-          break;
-          case "KeyZ":
-            p=floor-1;
-            setFloor(p);
-            break;
+
+      case "KeyQ":
+        p = floor + 1;
+        setFloor(p);
+        break;
+      case "KeyZ":
+        p = floor - 1;
+        setFloor(p);
+        break;
       default:
         break;
     }
@@ -147,12 +145,10 @@ p=floor+1;
     controlsRef.current.moveForward(-velocity.z * delta);
 
     // Increasing height on pressing F key
-    if (!ascend){
+    if (!ascend) {
       controlsRef.current.getObject().position.y += velocity.y * delta;
-      controlsRef.current.getObject().position.y = (0.5*floor);
-    
-    }
-    else controlsRef.current.getObject().position.y = 1.5; // new behavior
+      controlsRef.current.getObject().position.y = 0.5 * floor;
+    } else controlsRef.current.getObject().position.y = 1.5; // new behavior
 
     // bringing user back to plane after jump limit reached.
     if (controlsRef.current.getObject().position.y < 0) {

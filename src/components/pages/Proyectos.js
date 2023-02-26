@@ -104,6 +104,12 @@ export const OurAim = () => {
               <strong>Diseño:</strong> Arq. Edison Chicaisa
             </a>
           </Grid>
+          <Grid item xs={12} sm={3} lg={3} xl={3}>
+            <SportsEsportsIcon />
+            <a>
+              <strong>Controles:</strong> w,s,d,a,q,z
+            </a>
+          </Grid>
         </Grid>
       </div>
     </div>
@@ -179,7 +185,7 @@ export const OurVision = () => {
           <Grid item xs={12} sm={3} lg={3} xl={3}>
             <SportsEsportsIcon />
             <a>
-              <strong>Controles:</strong> w,s,d,a,f
+              <strong>Controles:</strong> w,s,d,a,q,z
             </a>
           </Grid>
         </Grid>
